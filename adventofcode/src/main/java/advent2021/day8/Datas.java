@@ -6,7 +6,7 @@ import java.util.List;
 public class Datas {
 
 	public final static List<String> datasTest2 = Arrays
-			.asList("acedgfb cdfbe gcdfa fbcad dab cefabd cdfgeb eafb cagedb ab | cdfeb fcadb cdfeb cdbaf");
+			.asList("gfdeca aeb eb fbdag eafdc adfbe cefdab bdaegcf efbc ecadgb | eb dbafe eab faecd");
 
 	public final static List<String> datasTest = Arrays.asList(
 			"be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe",

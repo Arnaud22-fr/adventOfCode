@@ -7,8 +7,8 @@ public class Main2 {
 	public static void main(String[] args) {
 
 //		List<String> datas = Datas.getDatastest();
-//		List<String> datas = Datas.getDatastest2();
-		List<String> datas = Datas.getDatas();
+		List<String> datas = Datas.getDatastest2();
+//		List<String> datas = Datas.getDatas();
 
 		int result = 0;
 
@@ -199,6 +199,18 @@ public class Main2 {
 					trouve = true;
 				}
 			}
+
+			System.out.println(entree + " > " + resultConcat);
+			System.out.println("ent0 > " + ent0);
+			System.out.println("ent1 > " + ent1);
+			System.out.println("ent2 > " + ent2);
+			System.out.println("ent3 > " + ent3);
+			System.out.println("ent4 > " + ent4);
+			System.out.println("ent5 > " + ent5);
+			System.out.println("ent6 > " + ent6);
+			System.out.println("ent7 > " + ent7);
+			System.out.println("ent8 > " + ent8);
+			System.out.println("ent9 > " + ent9);
 
 			result += Integer.parseInt(resultConcat);
 		}
