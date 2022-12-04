@@ -5,6 +5,10 @@ import java.util.List;
 
 public class Datas {
 
+	public final static List<String> entreesTest = Arrays.asList("vJrwpWtwJgWrhcsFMMfFFhFp",
+			"jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL", "PmmdzqPrVvPwwTWBwg", "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn",
+			"ttgJtRGJQctTZtZT", "CrZsJsPPZsGzwwsLwLmpwMDw");
+
 	public final static List<String> entrees = Arrays.asList("DsPhSBQQQhqmBDhPDsFwjwsLjlRjlttvjvvtRb",
 			"rNJMNNbrHrtjHLHjvwtg", "fNbNzZdrZnMnMPnQShFPDmnqFm", "QWVCFfQffgQCVZzVVpHsHJBqtpspJFRHqq",
 			"mwDbmnnGNlNcwNDDNRbnNDlJTpBJBtJGtPTLsBGqTqqsqp", "MlSdnScRnnmmDjSdNSdCzvggWzrgzjvfvrgVzW",
@@ -127,6 +131,10 @@ public class Datas {
 
 	public static List<String> getEntrees() {
 		return entrees;
+	}
+
+	public static List<String> getEntreesTest() {
+		return entreesTest;
 	}
 
 }
