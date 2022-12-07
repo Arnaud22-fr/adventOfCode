@@ -1,12 +1,14 @@
 package advent2022.day07;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
 
-public class Main1 {
+public class Main2 {
 
 	public static void main(String[] args) {
 
@@ -48,11 +50,19 @@ public class Main1 {
 							int currentFolderSize = dico.get(folderToUpdate);
 							currentFolderSize += tailleFichier;
 							dico.replace(folderToUpdate, currentFolderSize);
+							if ("/".equalsIgnoreCase(folderToUpdate)) {
+								break;
+							}
 						} else {
 							dico.put(folderToUpdate, tailleFichier);
 						}
 						if (!"/".equalsIgnoreCase(folderToUpdate)) {
 							folderToUpdate = folderToUpdate.substring(0, folderToUpdate.length() - 11);
+						}
+						if ("/".equalsIgnoreCase(folderToUpdate)) {
+							int currentFolderSize = dico.get(folderToUpdate);
+							currentFolderSize += tailleFichier;
+							dico.replace(folderToUpdate, currentFolderSize);
 						}
 
 					} while (!"/".equalsIgnoreCase(folderToUpdate));
@@ -63,10 +73,21 @@ public class Main1 {
 
 		}
 
-		for (Map.Entry<String, Integer> entry : dico.entrySet()) {
-			System.out.println(entry.getKey() + ">" + entry.getValue());
-			if (entry.getValue() <= 100000) {
-				result += entry.getValue();
+		LinkedHashMap<String, Integer> tri = dico.entrySet().stream().sorted(Map.Entry.comparingByValue())
+				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+
+		int totalUsed = tri.get("/");
+		System.out.println("totalUsed>" + totalUsed);
+		int unused = 70000000 - totalUsed;
+		System.out.println("freeSpace>" + unused);
+		int espaceNeeded = 30000000 - unused;
+		System.out.println("espaceNeeded>" + espaceNeeded);
+
+		for (var elem : tri.entrySet()) {
+			System.out.println("elem.getValue() >" + elem.getValue());
+			if (elem.getValue() > espaceNeeded) {
+				result = elem.getValue();
+				break;
 			}
 		}
 

@@ -156,7 +156,7 @@ public class Datas {
 			"$ cd wdmzc", "$ ls", "19843 hdb", "264263 jbqf.str", "261303 qrvt.lbr", "$ cd ..", "$ cd zrfmzrl", "$ ls",
 			"52067 lnfgp.nhl");
 
-	public static List<String> getCommandes() {
+	public static List<String> getCommands() {
 		return commands;
 	}
 
